@@ -77,8 +77,8 @@ class Image(object):
             crop_width_factor = config.Image.extreme_min_image_width_to_crop_factor
             crop_height_factor = config.Image.extreme_min_image_height_to_crop_factor
         else:
-            crop_width_factor = config.Image.min_image_width_to_crop_factor
-            crop_height_factor = config.Image.min_image_height_to_crop_factor
+            crop_width_factor = config.Image.default_min_image_width_to_crop_factor
+            crop_height_factor = config.Image.default_min_image_height_to_crop_factor
 
         # Decreasing the height and width for crops while checking it don't get small by 1/(min) of image height/width
         while True:
