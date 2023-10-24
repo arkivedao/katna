@@ -9,9 +9,9 @@ from distutils.core import Command
 with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
-if sys.version_info >= (3,10):
-   sys.exit("Python version greater than 3.9 not supported because of potential compatibility issues")
-
+if sys.version_info >= (3,12):
+   sys.exit("Python version greater than 3.11 not supported because of potential compatibility issues")
+   
 # This will store the models
 network_folder_path = os.path.join(os.path.expanduser("~"), ".katna")
 if not os.path.exists(network_folder_path):
