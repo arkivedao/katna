@@ -73,6 +73,7 @@ class Image(object):
         crop_height, crop_width = image_height, hr * ratio_width
         
         if original_image_aspect_ratio > config.Image.extreme_aspect_ratio:
+            logging.info(f"Image aspect ratio is considered extreme at a value of {original_image_aspect_ratio}. Modifying crop factors accordingly.")
             crop_width_factor = config.Image.extreme_min_image_width_to_crop_factor
             crop_height_factor = config.Image.extreme_min_image_height_to_crop_factor
         else:
